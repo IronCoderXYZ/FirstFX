@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package firstfx;
+package controller;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -30,8 +30,8 @@ public class FirstFX extends Application {
     
     public void mainWindow() {
         try {
-
-            FXMLLoader loader = new FXMLLoader(FirstFX.class.getResource("MainWindowView.fxml"));
+            
+            FXMLLoader loader = new FXMLLoader(FirstFX.class.getResource("/view/MainWindowView.fxml"));
             AnchorPane pane = loader.load();
             
             MainWindowController mainWindowController = loader.getController();

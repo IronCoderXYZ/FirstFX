@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.MainWindowController">
+   <children>
+      <Label fx:id="label" alignment="CENTER" layoutX="239.0" layoutY="183.0" text="I'm a Label" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="188.0" layoutY="281.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="textField" layoutX="188.0" layoutY="281.0" />
+            <Button layoutX="385.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleButton" text="Change Text" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
