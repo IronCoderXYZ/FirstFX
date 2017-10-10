@@ -16,23 +16,26 @@ import javafx.stage.Stage;
  *
  * @author mitch
  */
-public class FirstFx extends Application {
+public class FirstFX extends Application {
     
     private Stage primaryStage;
     
     @Override
     public void start(Stage primaryStage) {
+        
         this.primaryStage = primaryStage;
-        primaryStage.show();
+        
         mainWindow();
     }
     
     public void mainWindow() {
         try {
-            FXMLLoader loader = new FXMLLoader(FirstFx.class.getResource("MainWindowView.fxml"));
+
+            FXMLLoader loader = new FXMLLoader(FirstFX.class.getResource("MainWindowView.fxml"));
             AnchorPane pane = loader.load();
             
             MainWindowController mainWindowController = loader.getController();
+            mainWindowController.setFirstFX(this);
             
             Scene scene = new Scene(pane);
             
@@ -40,7 +43,7 @@ public class FirstFx extends Application {
             primaryStage.show();
             
         } catch (IOException ex) {
-           // Todo
+            System.out.println(ex);
         }
     }
 
