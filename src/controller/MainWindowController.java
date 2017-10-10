@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import model.Person;
 
-/**
- *
- * @author mitch
- */
 public class MainWindowController {
     
     // Views
@@ -20,14 +12,17 @@ public class MainWindowController {
     @ FXML private TextField textField;
     
     private FirstFX firstFX;
+    private Person person;
     
     public void setFirstFX(FirstFX firstfX) {
         this.firstFX = firstFX;
+        person = new Person("Jack", "White", "22");
     }
     
     public void handleButton() {
         String text = textField.getText();
-        label.setText(text);
+        
+        label.setText(person.getFirstName());
         textField.clear();
     }
     
