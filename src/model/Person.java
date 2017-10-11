@@ -5,11 +5,15 @@ public class Person {
     private String lastName;
     private String age;
     
-    // Constructor
+    // Constructors
     public Person(String firstName, String lastName, String age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+    }
+    
+    public Person(String firstName) {
+        this.firstName = firstName;
     }
     
     // Getters

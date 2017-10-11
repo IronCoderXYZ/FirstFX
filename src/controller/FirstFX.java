@@ -35,7 +35,7 @@ public class FirstFX extends Application {
             AnchorPane pane = loader.load();
             
             MainWindowController mainWindowController = loader.getController();
-            mainWindowController.setFirstFX(this);
+            mainWindowController.setFirstFX(this, primaryStage);
             
             Scene scene = new Scene(pane);
             
